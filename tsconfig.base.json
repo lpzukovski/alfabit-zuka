@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@alfabit-zuka/button": ["libs/button/src/index.ts"],
+      "@alfabit-zuka/input": ["libs/input/src/index.ts"],
       "@alfabit/ds-storybook": ["libs/storybook-host/src/index.ts"]
     }
   },
