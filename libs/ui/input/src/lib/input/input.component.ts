@@ -9,6 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './input.component.css',
 })
 export class InputComponent {
+
+  /**
+   * Indica se o input é multilinha.
+   */
   @Input()
   multiline = false;
 
@@ -16,7 +20,7 @@ export class InputComponent {
   label = '';
 
   /**
-   * Forneça um ID único para cada input.
+   * Forneça um ID único para cada input. 
    */
   @Input()
   id = '';

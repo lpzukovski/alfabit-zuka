@@ -82,6 +82,9 @@
     }
   },
   "release": {
-    "projects": ["libs/ui/*"]
+    "projects": ["libs/ui/*"],
+    "version": {
+      "conventionalCommits": true
+    }
   }
 }
