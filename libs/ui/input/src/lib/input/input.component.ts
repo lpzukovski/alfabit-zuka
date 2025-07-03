@@ -15,6 +15,9 @@ export class InputComponent {
   @Input()
   label = '';
 
+  /**
+   * Forneça um ID único para cada input.
+   */
   @Input()
   id = '';
 
