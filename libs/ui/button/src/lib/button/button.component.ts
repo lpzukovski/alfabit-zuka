@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-type Variant = 'primary'| 'secondary'| 'tertiary';
-type Theme = 'blue'| 'violet';
+type Variant = 'primary' | 'secondary' | 'tertiary';
+type Theme = 'blue' | 'violet';
 
 @Component({
   selector: 'ab-button',
@@ -12,7 +12,6 @@ type Theme = 'blue'| 'violet';
   styleUrl: './button.component.css',
 })
 export class ButtonComponent {
-
   /** Texto do botão. */
   @Input()
   text = '';

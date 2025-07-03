@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './input.component.css',
 })
 export class InputComponent {
-
   @Input()
   multiline = false;
 
@@ -24,10 +23,9 @@ export class InputComponent {
 
   getContainerClasses(): string {
     let classes = 'input-container';
-    if(this.label){
+    if (this.label) {
       classes += ' with-label';
     }
     return classes;
   }
-
 }

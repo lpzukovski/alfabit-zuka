@@ -82,6 +82,6 @@
     }
   },
   "release": {
-    "projects": ["libs/button"]
+    "projects": ["libs/ui/*"]
   }
 }
