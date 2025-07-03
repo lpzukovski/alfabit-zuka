@@ -17,6 +17,7 @@ export class ButtonComponent {
   @Input()
   text = '';
 
+  /** Variante do botão (primary | secondary | tertiary) */
   @Input()
   variant: Variant = 'primary';
 
