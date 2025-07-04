@@ -2,16 +2,18 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { InputComponent } from '@alfabit-zuka/input';
 
 const meta: Meta<InputComponent> = {
-  component: InputComponent
+  component: InputComponent,
 };
+
 export default meta;
+
 type Story = StoryObj<InputComponent>;
 
 export const Primary: Story = {
   args: {
     multiline: false,
     label: '',
-    id: '', 
+    id: '',
     disabled: false,
   },
 };
@@ -28,15 +30,15 @@ export const PrimaryWithLabel: Story = {
   args: {
     ...Primary.args,
     label: 'Label',
-    id: '2'
+    id: '1',
   },
 };
 
 export const MultilineWithLabel: Story = {
   args: {
     ...Multiline.args,
-    label : 'Label',
-    id: '3'
+    label: 'Label',
+    id: '2',
   },
 };
 
@@ -58,7 +60,9 @@ export const MultilineDisabled: Story = {
 
 export const PrimaryWithLabelDisabled: Story = {
   args: {
-    ...PrimaryWithLabel.args,
+    ...Primary.args,
+    label: 'Label',
+    id: '3',
     disabled: true,
     id: '6'
   },
@@ -66,7 +70,9 @@ export const PrimaryWithLabelDisabled: Story = {
 
 export const MultilineWithLabelDisabled: Story = {
   args: {
-    ...MultilineWithLabel.args,
+    ...Multiline.args,
+    label: 'Label',
+    id: '4',
     disabled: true,
     id: '7'
   },

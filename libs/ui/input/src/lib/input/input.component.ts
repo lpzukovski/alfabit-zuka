@@ -11,28 +11,23 @@ import { CommonModule } from '@angular/common';
 export class InputComponent {
 
   /**
-   * Indica se o input é multilinha.
+   * Define se o Input é multilinha.
    */
-  @Input()
-  multiline = false;
-
-  @Input()
-  label = '';
-
+  @Input() multiline = false;
+  @Input() label = '';
   /**
-   * Forneça um ID único para cada input. 
+   * Forneça um id único para cada input.
    */
-  @Input()
-  id = '';
-
-  @Input()
-  disabled = false;
+  @Input() id = '';
+  @Input() disabled = false;
 
   getContainerClasses(): string {
     let classes = 'input-container';
+
     if (this.label) {
       classes += ' with-label';
     }
+
     return classes;
   }
 }

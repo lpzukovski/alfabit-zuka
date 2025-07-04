@@ -1,4 +1,4 @@
-import { argsToTemplate, Meta, StoryObj } from '@storybook/angular';
+import { argsToTemplate, type Meta, type StoryObj } from '@storybook/angular';
 import { ButtonComponent } from '@alfabit-zuka/button';
 
 type ButtonInputsAndCustomArgs = ButtonComponent & { text: string };
@@ -8,7 +8,7 @@ const meta: Meta<ButtonInputsAndCustomArgs> = {
   args: {
     text: 'Action',
   },
-  render: (text, ...buttonArgs) => ({
+  render: ({ text, ...buttonArgs }) => ({
     props: buttonArgs,
     template: `
       <ab-button ${argsToTemplate(buttonArgs)}>
@@ -34,18 +34,22 @@ export const PrimaryButton: Story = {
     theme: 'blue',
   },
 };
+
 export const PrimaryButtonDisabled: Story = {
   args: {
     ...PrimaryButton.args,
     disabled: true,
   },
 };
+
 export const SecondaryButton: Story = {
   args: {
     ...PrimaryButton.args,
     variant: 'secondary',
+    disabled: false,
   },
 };
+
 export const SecondaryButtonDisabled: Story = {
   args: {
     ...SecondaryButton.args,
@@ -58,42 +62,49 @@ export const TertiaryButton: Story = {
     variant: 'tertiary',
   },
 };
+
 export const TertiaryButtonDisabled: Story = {
   args: {
     ...TertiaryButton.args,
     disabled: true,
   },
 };
+
 export const PrimaryButtonViolet: Story = {
   args: {
     ...PrimaryButton.args,
     theme: 'violet',
   },
 };
+
 export const PrimaryButtonDisabledViolet: Story = {
   args: {
     ...PrimaryButtonDisabled.args,
     theme: 'violet',
   },
 };
+
 export const SecondaryButtonViolet: Story = {
   args: {
     ...SecondaryButton.args,
     theme: 'violet',
   },
 };
+
 export const SecondaryButtonDisabledViolet: Story = {
   args: {
     ...SecondaryButtonDisabled.args,
     theme: 'violet',
   },
 };
+
 export const TertiaryButtonViolet: Story = {
   args: {
     ...TertiaryButton.args,
     theme: 'violet',
   },
 };
+
 export const TertiaryButtonDisabledViolet: Story = {
   args: {
     ...TertiaryButtonDisabled.args,
