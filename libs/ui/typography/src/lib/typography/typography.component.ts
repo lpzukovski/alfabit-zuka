@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { H1Component, H2Component, H3Component, H4Component, H5Component, Size, SpanComponent } from './dynamic.component';
 
 type Text =
   | 'title1'
@@ -8,46 +9,6 @@ type Text =
   | 'subtitle1'
   | 'subtitle2'
   | 'normal';
-
-type Size =
-  | 'title1'
-  | 'title2'
-  | 'title3'
-  | 'subtitle1'
-  | 'subtitle2'
-  | 'lg'
-  | 'md'
-  | 'sm'
-  | 'xs';
-
-@Component({
-  standalone: true,
-  styleUrl: './typography.component.css',
-  template: `
-    <h1 class="typography {{ size }}">
-      <ng-content/>
-    </h1>
-  `,
-})
-export class H1Component {
-    @Input()
-    size!: Size;
-}
-
-
-@Component({
-  standalone: true,
-  styleUrl: './typography.component.css',
-  template: `
-  <span class="typography {{ size }}">
-    <ng-content/>
-  </span>
-  `,
-})
-export class SpanComponent {
-    @Input()
-    size!: Size;
-}
 
 @Component({
   selector: 'ab-typography',
@@ -76,10 +37,10 @@ export class TypographyComponent implements OnInit {
 
   private componentsMap = {
     title1: H1Component,
-    title2: SpanComponent,
-    title3: SpanComponent,
-    subtitle1: SpanComponent,
-    subtitle2: SpanComponent,
+    title2: H2Component,
+    title3: H3Component,
+    subtitle1: H4Component,
+    subtitle2: H5Component,
     normal: SpanComponent,
   } satisfies {[key in Text]: any};
 
