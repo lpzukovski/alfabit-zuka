@@ -15,7 +15,7 @@ import {
   H5Component,
   Size,
   SpanComponent,
-} from './dynamic-component';
+} from './dynamic.component';
 
 type Text =
   | 'title1'

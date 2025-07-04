@@ -64,7 +64,6 @@ export const PrimaryWithLabelDisabled: Story = {
     label: 'Label',
     id: '3',
     disabled: true,
-    id: '6'
   },
 };
 
@@ -74,6 +73,5 @@ export const MultilineWithLabelDisabled: Story = {
     label: 'Label',
     id: '4',
     disabled: true,
-    id: '7'
   },
 };

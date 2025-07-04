@@ -17,6 +17,7 @@
     "paths": {
       "@alfabit-zuka/button": ["libs/ui/button/src/index.ts"],
       "@alfabit-zuka/input": ["libs/ui/input/src/index.ts"],
+      "@alfabit-zuka/modal": ["libs/ui/modal/src/index.ts"],
       "@alfabit-zuka/typography": ["libs/ui/typography/src/index.ts"],
       "@alfabit/ds-storybook": ["libs/storybook-host/src/index.ts"]
     }
