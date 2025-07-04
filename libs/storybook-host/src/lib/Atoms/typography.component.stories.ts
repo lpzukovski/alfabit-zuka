@@ -1,19 +1,31 @@
 import { argsToTemplate, type Meta, type StoryObj } from '@storybook/angular';
 import { TypographyComponent } from '@alfabit-zuka/typography';
 
-const meta: Meta<TypographyComponent> = {
+type TypographyArgsAndCustomArgs = TypographyComponent & {text: string};
+
+const meta: Meta<TypographyArgsAndCustomArgs> = {
   component: TypographyComponent,
-  render: (args)=> ({
-    props: args,
+  args: {
+    text: 'Text'
+  },
+  render: ({text, ...typographyArgs})=> ({
+    props: typographyArgs,
     template: `
-      <ab-typography ${argsToTemplate(args)}>
-        Novo Conteúdo
+      <ab-typography ${argsToTemplate(typographyArgs)}>
+        ${text}
       </ab-typography>
     `
-  })
+  }),
+  parameters: {
+    controls:{
+      include: ['variant', 'size', 'text']
+    }
+  }
 };
+
 export default meta;
-type Story = StoryObj<TypographyComponent>;
+
+type Story = StoryObj<TypographyArgsAndCustomArgs>;
 
 export const Title1: Story = {
   args: {
