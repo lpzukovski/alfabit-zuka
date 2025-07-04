@@ -1,13 +1,13 @@
 {
   "name": "@alfabit-zuka/modal",
-  "version": "0.0.1",
+  "version": "2.1.0",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@alfabit-zuka/typography": "2.0.0"
+    "@alfabit-zuka/typography": "2.1.0"
   },
   "sideEffects": false,
   "publishConfig": {

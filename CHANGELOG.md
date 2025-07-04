@@ -1,3 +1,14 @@
+## 2.1.0 (2025-07-04)
+
+
+### 🚀 Features
+
+- **modal:** cria componente e story ([52ba34d](https://github.com/lpzukovski/alfabit-zuka/commit/52ba34d))
+
+### ❤️  Thank You
+
+- Lucas Paulo Zukovski
+
 # 2.0.0 (2025-07-04)
 
 
