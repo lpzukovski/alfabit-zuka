@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TypographyComponent} from '@alfabit-zuka/typography';
 
@@ -17,6 +17,9 @@ export class ModalComponent implements AfterViewChecked{
   @Input()
   modalTitle = '';
 
+  @Output()
+  closed = new EventEmitter();
+
   @ViewChild('modal')
   modal!: ElementRef<HTMLDialogElement>;
 
@@ -25,6 +28,12 @@ export class ModalComponent implements AfterViewChecked{
       this.modal.nativeElement.showModal();
     }else {
       this.modal.nativeElement.close();
+    }
+  }
+
+  closeModal(){
+    if(this.isOpen){
+      this.closed.emit();
     }
   }
 }
