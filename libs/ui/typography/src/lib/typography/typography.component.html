@@ -1,3 +1,9 @@
-<h1>
+<ng-template #template>
     <ng-content/>
-</h1>
+</ng-template>
+
+<ng-container *ngComponentOutlet="
+    component;
+    content: dynamicComponentContent;
+    inputs: inputs;
+" />
