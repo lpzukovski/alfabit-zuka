@@ -1,86 +1,102 @@
-import type {Meta, StoryObj} from "@storybook/angular"
-import {ButtonComponent} from '@alfabit-zuka/button';
+import { argsToTemplate, type Meta, type StoryObj } from '@storybook/angular';
+import { ButtonComponent } from '@alfabit-zuka/button';
 
+type ButtonInputsAndCustomArgs = ButtonComponent & { text: string };
 
-const meta: Meta<ButtonComponent> = {
-    component: ButtonComponent
-}
+const meta: Meta<ButtonInputsAndCustomArgs> = {
+  component: ButtonComponent,
+  args: {
+    text: 'Action',
+  },
+  render: (args) => ({
+    props: args,
+    template: `
+      <ab-button ${argsToTemplate(args)}>
+        Action
+      </ab-button>
+    `,
+  }),
+  parameters: {
+    controls: {
+      exclude: ['getClasses'],
+    },
+  },
+};
 
 export default meta;
 
 type Story = StoryObj<ButtonComponent>;
 
 export const PrimaryButton: Story = {
-    args: {
-        text: 'Action', 
-        variant: 'primary',
-        disabled: false,
-        theme: 'blue'
-    }
+  args: {
+    variant: 'primary',
+    disabled: false,
+    theme: 'blue',
+  },
 };
 export const PrimaryButtonDisabled: Story = {
-    args: {
-        ...PrimaryButton.args,
-        disabled: true
-    }
+  args: {
+    ...PrimaryButton.args,
+    disabled: true,
+  },
 };
 export const SecondaryButton: Story = {
-    args: {
-        ...PrimaryButton.args,
-        variant: 'secondary'
-    }
+  args: {
+    ...PrimaryButton.args,
+    variant: 'secondary',
+  },
 };
 export const SecondaryButtonDisabled: Story = {
-    args: {
-        ...PrimaryButtonDisabled.args,
-        variant: 'secondary'
-    }
+  args: {
+    ...PrimaryButtonDisabled.args,
+    variant: 'secondary',
+  },
 };
 export const TertiaryButton: Story = {
-    args: {
-        ...PrimaryButton.args,
-        variant: 'tertiary'
-    }
+  args: {
+    ...PrimaryButton.args,
+    variant: 'tertiary',
+  },
 };
 export const TertiaryButtonDisabled: Story = {
-    args: {
-        ...PrimaryButtonDisabled.args,
-        variant: 'tertiary'
-    }
+  args: {
+    ...PrimaryButtonDisabled.args,
+    variant: 'tertiary',
+  },
 };
 export const PrimaryButtonViolet: Story = {
-    args: {
-        ...PrimaryButton.args,
-        theme: 'violet'
-    }
+  args: {
+    ...PrimaryButton.args,
+    theme: 'violet',
+  },
 };
 export const PrimaryButtonDisabledViolet: Story = {
-    args: {
-        ...PrimaryButtonDisabled.args,
-        theme:'violet'
-    }
+  args: {
+    ...PrimaryButtonDisabled.args,
+    theme: 'violet',
+  },
 };
 export const SecondaryButtonViolet: Story = {
-    args: {
-        ...SecondaryButton.args,
-        theme:'violet'
-    }
+  args: {
+    ...SecondaryButton.args,
+    theme: 'violet',
+  },
 };
 export const SecondaryButtonDisabledViolet: Story = {
-    args: {
-        ...SecondaryButtonDisabled.args,
-        theme:'violet'
-    }
+  args: {
+    ...SecondaryButtonDisabled.args,
+    theme: 'violet',
+  },
 };
 export const TertiaryButtonViolet: Story = {
-    args: {
-        ...TertiaryButton.args,
-        theme:'violet'
-    }
+  args: {
+    ...TertiaryButton.args,
+    theme: 'violet',
+  },
 };
 export const TertiaryButtonDisabledViolet: Story = {
-    args: {
-        ...TertiaryButtonDisabled.args,
-        theme:'violet'
-    }
+  args: {
+    ...TertiaryButtonDisabled.args,
+    theme: 'violet',
+  },
 };
