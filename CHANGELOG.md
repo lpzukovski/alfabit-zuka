@@ -1,3 +1,7 @@
+## 2.2.1 (2025-07-07)
+
+This was a version bump only, there were no code changes.
+
 ## 2.2.0 (2025-07-07)
 
 
