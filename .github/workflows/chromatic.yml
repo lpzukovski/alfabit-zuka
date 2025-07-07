@@ -25,4 +25,6 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
       
       - name: Run Chromatic
-        run: npx nx affected -t chromatic
+        env:
+          PROJECT_TOKEN: ${{ secrets.CHROMATIC_ACCESS_TOKEN }}
+        run: npx nx affected -t chromatic --args='--projectToken="$PROJECT_TOKEN"'
