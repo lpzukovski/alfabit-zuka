@@ -1,3 +1,20 @@
+## 2.2.0 (2025-07-07)
+
+
+### 🚀 Features
+
+- **button:** adiciona JSDoc ([ba8b738](https://github.com/lpzukovski/alfabit-zuka/commit/ba8b738))
+- **button:** adiciona JSDoc ([57c1a92](https://github.com/lpzukovski/alfabit-zuka/commit/57c1a92))
+- **button:** altera cor do botão secundário ([79e5d3f](https://github.com/lpzukovski/alfabit-zuka/commit/79e5d3f))
+
+### 🩹 Fixes
+
+- **button:** corrigindo cor de fundo ([14ed5c8](https://github.com/lpzukovski/alfabit-zuka/commit/14ed5c8))
+
+### ❤️  Thank You
+
+- Lucas Paulo Zukovski
+
 ## 2.1.0 (2025-07-04)
 
 

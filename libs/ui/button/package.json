@@ -1,12 +1,12 @@
 {
   "name": "@alfabit-zuka/button",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
   },
   "dependencies": {
-    "@alfabit-zuka/typography": "2.1.0"
+    "@alfabit-zuka/typography": "2.2.0"
   },
   "sideEffects": false,
   "publishConfig": {
