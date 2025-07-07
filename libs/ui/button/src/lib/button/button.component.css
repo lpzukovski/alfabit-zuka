@@ -33,7 +33,8 @@ button.primary:disabled {
 }
 
 button.secondary {
-  background: var(--ab-quaternary-color, #ecf0ff);
+  background: red;
+  /* background: var(--ab-quaternary-color, #ecf0ff); */
   color: var(--ab-primary-color, #2d5bff);
 }
 
