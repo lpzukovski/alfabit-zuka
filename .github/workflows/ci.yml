@@ -23,5 +23,5 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci
-      #- uses: nrwl/nx-set-shas@v4
-      - run: npx nx run-many -t lint test --exclude=alfabit
+      - uses: nrwl/nx-set-shas@v4
+      - run: npx nx affected -t lint test --exclude=alfabit
